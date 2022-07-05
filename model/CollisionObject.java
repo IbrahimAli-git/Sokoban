@@ -4,8 +4,8 @@ import java.awt.*;
 
 public abstract class CollisionObject extends GameObject {
 
-    public CollisionObject(int x, int t) {
-        super(x, t);
+    public CollisionObject(int x, int y) {
+        super(x, y);
     }
 
     @Override

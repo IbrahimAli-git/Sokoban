@@ -4,8 +4,8 @@ import java.awt.*;
 
 public class Box extends CollisionObject implements Movable {
 
-    public Box(int x, int t) {
-        super(x, t);
+    public Box(int x, int y) {
+        super(x, y);
     }
 
     @Override

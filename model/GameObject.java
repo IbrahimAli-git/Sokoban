@@ -6,9 +6,9 @@ public abstract class GameObject {
     protected int x, y, width, height;
     public static int BOARD_CELL_SIZE = 20;
 
-    public GameObject(int x, int t) {
+    public GameObject(int x, int y) {
         this.x = x;
-        this.y = t;
+        this.y = y;
         this.width = BOARD_CELL_SIZE;
         this.height = BOARD_CELL_SIZE;
     }
