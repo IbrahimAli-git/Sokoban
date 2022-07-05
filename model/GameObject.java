@@ -3,7 +3,7 @@ package com.codegym.task.task34.task3410.model;
 import java.awt.*;
 
 public abstract class GameObject {
-    int x, y, width, height;
+    protected int x, y, width, height;
     public static int BOARD_CELL_SIZE = 20;
 
     public GameObject(int x, int t) {
