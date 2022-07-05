@@ -1,12 +1,14 @@
 package com.codegym.task.task34.task3410.view;
 
 import com.codegym.task.task34.task3410.controller.Controller;
+import com.codegym.task.task34.task3410.controller.EventListener;
 
 import javax.swing.*;
 
 public class View extends JFrame {
     private Controller controller;
     private Board board;
+
 
     public View(Controller controller) {
         this.controller = controller;
@@ -21,5 +23,9 @@ public class View extends JFrame {
         setLocationRelativeTo(null);
         setTitle("Sokoban");
         setVisible(true);
+    }
+
+    public void setEventListener(EventListener eventListener) {
+        board.setEventListener(eventListener);
     }
 }
