@@ -10,7 +10,6 @@ public class View extends JFrame {
     private Controller controller;
     private Board board;
 
-
     public View(Controller controller) {
         this.controller = controller;
     }
@@ -30,17 +29,17 @@ public class View extends JFrame {
         board.setEventListener(eventListener);
     }
 
-    public void update(){
+    public void update() {
         board.repaint();
     }
 
-    public GameObjects getGameObjects(){
+    public GameObjects getGameObjects() {
         return controller.getGameObjects();
     }
 
-    public void completed(int level){
+    public void completed(int level) {
         update();
-        JOptionPane.showMessageDialog(this, "Completed the level" + level);
+        JOptionPane.showMessageDialog(this, "Level " + level + ": passed.", "You won", JOptionPane.INFORMATION_MESSAGE);
         controller.startNextLevel();
     }
 }
