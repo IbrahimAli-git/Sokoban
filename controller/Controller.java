@@ -6,16 +6,22 @@ import com.codegym.task.task34.task3410.model.Model;
 import com.codegym.task.task34.task3410.view.View;
 
 public class Controller implements EventListener {
-    View view;
-    Model model;
+    private View view;
+    private Model model;
 
     public Controller() {
-        view = new View(this);
         model = new Model();
+        view = new View(this);
+
         view.init();
         model.restart();
+
         model.setEventListener(this);
         view.setEventListener(this);
+    }
+
+    public static void main(String[] args) {
+        new Controller();
     }
 
     @Override
@@ -43,9 +49,5 @@ public class Controller implements EventListener {
 
     public GameObjects getGameObjects() {
         return model.getGameObjects();
-    }
-
-    public static void main(String[] args) {
-        Controller controller = new Controller();
     }
 }
