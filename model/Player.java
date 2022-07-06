@@ -1,13 +1,11 @@
 package com.codegym.task.task34.task3410.model;
 
 import java.awt.*;
-import java.util.Collection;
 
 public class Player extends CollisionObject implements Movable {
 
-
-    public Player(int x, int t) {
-        super(x, t);
+    public Player(int x, int y) {
+        super(x, y);
     }
 
     @Override
@@ -18,15 +16,13 @@ public class Player extends CollisionObject implements Movable {
 
     @Override
     public void draw(Graphics graphics) {
-        graphics.setColor(Color.YELLOW);
+        graphics.setColor(Color.yellow);
 
-        int yy = getY();
-        int xx = getX();
+        int xc = getX();
+        int yc = getY();
         int height = getHeight();
         int width = getWidth();
 
-
-        graphics.fillOval(xx - width / 2, yy - height / 2, width, height);
-
+        graphics.fillOval(xc - width / 2, yc - height / 2, width, height);
     }
 }

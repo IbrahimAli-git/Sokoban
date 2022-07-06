@@ -3,21 +3,19 @@ package com.codegym.task.task34.task3410.model;
 import java.awt.*;
 
 public class Wall extends CollisionObject {
-
     public Wall(int x, int y) {
         super(x, y);
     }
 
     @Override
     public void draw(Graphics graphics) {
-        graphics.setColor(Color.DARK_GRAY);
+        graphics.setColor(new Color(210, 105, 30));
 
-        int yy = getY();
-        int xx = getX();
+        int xc = getX();
+        int yc = getY();
         int height = getHeight();
         int width = getWidth();
 
-
-        graphics.fillOval(xx - width / 2, yy - height / 2, width, height);
+        graphics.fillRect(xc - width / 2, yc - height / 2, width, height);
     }
 }

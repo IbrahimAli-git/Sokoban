@@ -1,7 +1,5 @@
 package com.codegym.task.task34.task3410.model;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -18,15 +16,6 @@ public class GameObjects {
         this.player = player;
     }
 
-    public Set<GameObject> getAll(){
-        Set<GameObject> gameObjects = new HashSet<>();
-        gameObjects.addAll(walls);
-        gameObjects.addAll(boxes);
-        gameObjects.addAll(storageLocations);
-        gameObjects.add(player);
-        return gameObjects;
-    }
-
     public Set<Wall> getWalls() {
         return walls;
     }
@@ -41,5 +30,25 @@ public class GameObjects {
 
     public Player getPlayer() {
         return player;
+    }
+
+    public Set<GameObject> getAll() {
+        Set<GameObject> gameObjects = new HashSet<>();
+        gameObjects.addAll(walls);
+        gameObjects.addAll(storageLocations);
+        gameObjects.addAll(boxes);
+        gameObjects.add(player);
+        return gameObjects;
+    }
+
+    public GameObjects getLevel(int level){
+
+
+
+        Set<Wall> walls = new HashSet<>();
+        Set<Box> boxes = new HashSet<>();
+        Set<StorageLocation> storageLocations = new HashSet<>();
+        Player player = new Player(0, 0);
+        return new GameObjects(walls, boxes, storageLocations, player);
     }
 }
