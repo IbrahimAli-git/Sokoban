@@ -1,6 +1,7 @@
 package com.codegym.task.task34.task3410.controller;
 
 import com.codegym.task.task34.task3410.model.Direction;
+import com.codegym.task.task34.task3410.model.GameObjects;
 import com.codegym.task.task34.task3410.model.Model;
 import com.codegym.task.task34.task3410.view.View;
 
@@ -12,6 +13,7 @@ public class Controller implements EventListener {
         view = new View(this);
         model = new Model();
         view.init();
+        model.restart();
     }
 
     @Override
@@ -32,6 +34,10 @@ public class Controller implements EventListener {
     @Override
     public void levelCompleted(int level) {
 
+    }
+
+    public GameObjects getGameObjects() {
+        return model.getGameObjects();
     }
 
     public static void main(String[] args) {
